@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ejercicio 2.2 - Personalización mediante media queries</title>
+
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+      :root {
+        --color-amarillo: #FFFF33;
+        --color-rojo: #FF1A1A;
+        --color-naranja: #FF9933;
+        --color-cian: #33FFFF;
+        --color-verde: #33FF33;
+        --color-blanco: #FFFFFF;
+        --color-borde: #000000;
+      }
+
+      .bloque {
+        border: 1px solid var(--color-borde);
+      }
+
+        /* xs: amarillo (estilo base, sin media query) */
+        .top {
+        background-color: var(--color-amarillo);
+        }
+        .rojitos  {
+            background-color: var(--color-rojo);
+        }
+        /* sm: naranja */
+        @media (min-width: 576px) {
+        .top {
+            background-color: var(--color-naranja);
+            
+        }
+        }
+
+        /* md en adelante: verde */
+        @media (min-width: 768px) {
+            .top {
+                background-color: var(--color-verde);
+            
+            }
+        }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4">
+
+        <div class="row">
+            <div class="col-12 bloque top text-center text-md-start">Top</div>
+        </div>
+
+        <div class = "row">
+            
+            <div class = "col-12 bloque rojitos text-center">A</div>
+            <div class = "col-12 d-sm-none bloque b text-center">B</div>
+            <div class = "col-12 d-sm-none bloque b text-center">C</div>
+            
+        </div>
+       
+    </div>
+
+    </div>
+
+    <!-- JS de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
