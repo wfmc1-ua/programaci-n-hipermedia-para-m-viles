@@ -27,15 +27,24 @@
         .top {
         background-color: var(--color-amarillo);
         }
-        .rojitos  {
+        .a {
             background-color: var(--color-rojo);
         }
+        .b {
+            background-color: var(--color-rojo);
+        }
+        .c {
+            background-color: var(--color-rojo);
+        }
+        .end{ background-color: var(--color-amarillo);}
+        
         /* sm: naranja */
         @media (min-width: 576px) {
-        .top {
+          .top {
             background-color: var(--color-naranja);
-            
-        }
+          }
+          .b{ background-color: var(--color-cian);}
+          .c{ background-color: var(--color-cian);}
         }
 
         /* md en adelante: verde */
@@ -44,6 +53,10 @@
                 background-color: var(--color-verde);
             
             }
+
+            .a{ background-color: var(--color-cian);}
+            .b{ background-color: var(--color-cian);}
+            .c{ background-color: var(--color-cian);}
         }
 
       
@@ -58,10 +71,15 @@
 
         <div class = "row">
             
-            <div class = "col-12 bloque rojitos text-center">A</div>
-            <div class = "col-12 d-sm-none bloque b text-center">B</div>
-            <div class = "col-12 d-sm-none bloque b text-center">C</div>
+            <div class = "col-12 col-md-4 bloque a text-center">A</div>
+            <div class = "col-12 col-sm-6 col-md-4 bloque  b text-center">B</div>
+            <div class = "col-12  col-sm-6 bloque col-md-4 c text-center">C</div>
             
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 bloque end text-center text-md-start">Left</div>
+            <div class="col-12 col-md-6 bloque end text-center text-md-end">Right</div>
         </div>
        
     </div>
