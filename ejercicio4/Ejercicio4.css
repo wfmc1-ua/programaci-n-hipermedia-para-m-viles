@@ -1,0 +1,12 @@
+/* Todas las imágenes del carrusel con la misma altura */
+#carruselMonstruos .carousel-item img {
+  height: 450px;
+  object-fit: cover;   /* recorta en vez de deformar */
+}
+
+/* En móvil, más bajito */
+@media (max-width: 767.98px) {
+  #carruselMonstruos .carousel-item img {
+    height: 220px;
+  }
+}
